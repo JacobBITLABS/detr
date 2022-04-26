@@ -150,7 +150,7 @@ def build(image_set, args):
     mode = 'instances'
     PATHS = {
         "train": (root / "VisDrone2019-DET-train/images", root / f'VisDrone2019-DET-train/coco_annotations/train.json'),
-        "val": (root / "VisDrone2019-DET-val/images", root / f'VisDrone2019/coco_annotations/val.json'),
+        "val": (root / "VisDrone2019-DET-val/images", root / f'VisDrone2019-DET-val/coco_annotations/val.json'),
     }
 
     img_folder, ann_file = PATHS[image_set]
