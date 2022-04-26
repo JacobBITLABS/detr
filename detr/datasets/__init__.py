@@ -4,6 +4,7 @@ import torchvision
 
 from .coco import build as build_coco
 from .face import build as build_face
+from .dronevis import build as build_drone
 
 
 def get_coco_api_from_dataset(dataset):
@@ -21,6 +22,8 @@ def build_dataset(image_set, args):
         return build_coco(image_set, args)
     if args.dataset_file == 'face':
         return build_face(image_set, args)
+    if args.dataset_file == 'dronevis':
+        return build_drone(image_set, args)
     if args.dataset_file == 'coco_panoptic':
         # to avoid making panopticapi required for coco
         from .coco_panoptic import build as build_coco_panoptic

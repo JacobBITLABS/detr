@@ -306,8 +306,12 @@ def build(args):
     # if args.dataset_file == "coco_panoptic":
     #     num_classes = 250
     if args.dataset_file == "face":
+        print("[NUM_CLASS] 1")
         num_classes = 1
-        
+    elif args.dataset_file == "dronevis":
+        print("[NUM_CLASS] 10")
+        num_classes = 10
+
     device = torch.device(args.device)
 
     backbone = build_backbone(args)
