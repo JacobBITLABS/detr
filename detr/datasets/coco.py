@@ -54,7 +54,7 @@ class ConvertCocoPolysToMask(object):
     def __call__(self, image, target):
         w, h = image.size
 
-        image_id = target["image_id"]
+        image_id = int(target["image_id"])
         image_id = torch.tensor([image_id])
 
         anno = target["annotations"]
